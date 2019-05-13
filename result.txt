@@ -1,0 +1,66 @@
+12:50:46.239497 call         5 def main():
+12:50:46.239984 line         6     class Structure:
+New var:....... Structure = <class '__main__.main.<locals>.Structure'>
+12:50:46.241198 line        32     class Stock(Structure):
+New var:....... Stock = <class '__main__.main.<locals>.Stock'>
+12:50:46.241555 line        36     s2 = Stock('ACME', 50, 91.1, date='8/2/2019')
+New var:....... s2 = <__main__.main.<locals>.Stock object at 0x1041a87f0>
+12:50:46.241896 line        38     print(s2.__dict__)
+12:50:46.242088 return      38     print(s2.__dict__)
+Return value:.. None
+12:51:24.899056 call         5 def main():
+12:51:24.899424 line         6     class Structure:
+    12:51:24.900538 call         6     class Structure:
+    12:51:24.900825 line         6     class Structure:
+    New var:....... __module__ = '__main__'
+    New var:....... __qualname__ = 'main.<locals>.Structure'
+    12:51:24.901396 line         8         _fields = []
+    New var:....... _fields = []
+    12:51:24.901745 line        10         def __init__(self, *args, **kwargs):
+    New var:....... __init__ = <function main.<locals>.Structure.__init__ at 0x1150db730>
+    12:51:24.902125 return      10         def __init__(self, *args, **kwargs):
+    Return value:.. None
+New var:....... Structure = <class '__main__.main.<locals>.Structure'>
+12:51:24.902607 line        32     class Stock(Structure):
+    12:51:24.902774 call        32     class Stock(Structure):
+    12:51:24.902943 line        32     class Stock(Structure):
+    New var:....... __module__ = '__main__'
+    New var:....... __qualname__ = 'main.<locals>.Stock'
+    12:51:24.903415 line        33         _fields = ['name', 'shares', 'price']
+    New var:....... _fields = ['name', 'shares', 'price']
+    12:51:24.903719 return      33         _fields = ['name', 'shares', 'price']
+    Return value:.. None
+New var:....... Stock = <class '__main__.main.<locals>.Stock'>
+12:51:24.904178 line        36     s2 = Stock('ACME', 50, 91.1, date='8/2/2019')
+    Starting var:.. args = ('ACME', 50, 91.1)
+    Starting var:.. kwargs = {'date': '8/2/2019'}
+    Starting var:.. self = <__main__.main.<locals>.Stock object at 0x114fea828>
+    12:51:24.904733 call        10         def __init__(self, *args, **kwargs):
+    12:51:24.904898 line        11             if len(args) != len(self._fields):
+    12:51:24.905062 line        16             for name, value in zip(self._fields, args):
+    New var:....... name = 'name'
+    New var:....... value = 'ACME'
+    12:51:24.905474 line        17                 setattr(self, name, value)
+    12:51:24.905638 line        16             for name, value in zip(self._fields, args):
+    Modified var:.. name = 'shares'
+    Modified var:.. value = 50
+    12:51:24.906044 line        17                 setattr(self, name, value)
+    12:51:24.906222 line        16             for name, value in zip(self._fields, args):
+    Modified var:.. name = 'price'
+    Modified var:.. value = 91.1
+    12:51:24.906664 line        17                 setattr(self, name, value)
+    12:51:24.906841 line        16             for name, value in zip(self._fields, args):
+    12:51:24.907019 line        20             extra_args = kwargs.keys() - self._fields
+    New var:....... extra_args = {'date'}
+    12:51:24.907339 line        24             for name in extra_args:
+    Modified var:.. name = 'date'
+    12:51:24.907651 line        25                 setattr(self, name, kwargs.pop(name))
+    Modified var:.. kwargs = {}
+    12:51:24.907964 line        24             for name in extra_args:
+    12:51:24.908143 line        27             if kwargs:  # 如果还剩元素代表关键字参数在args里面
+    12:51:24.908324 return      27             if kwargs:  # 如果还剩元素代表关键字参数在args里面
+    Return value:.. None
+New var:....... s2 = <__main__.main.<locals>.Stock object at 0x114fea828>
+12:51:24.908755 line        38     print(s2.__dict__)
+12:51:24.908938 return      38     print(s2.__dict__)
+Return value:.. None

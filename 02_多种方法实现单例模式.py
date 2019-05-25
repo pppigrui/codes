@@ -85,8 +85,12 @@ class SingletonPeople:
 
 
 class People3(SingletonPeople):
+    _first_init = True  # 判断是否是第一次实例化 确保单例模式的实例是第一个而不是最后一个
+
     def __init__(self, name):
-        self.name = name
+        if self._first_init:
+            self.name = name
+            self._first_init = False  # 第一次实例化之后变为False
 
     def __repr__(self):
         return self.name
